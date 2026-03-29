@@ -119,3 +119,18 @@ app.get('/logout', (req, res) => {
 app.listen(3000, () => {
     console.log("Server running on http://localhost:3000");
 });
+
+// TEMP USER STORAGE
+const users = [];
+
+// SIGNUP ROUTE
+app.post("/signup", (req, res) => {
+    const { username, password } = req.body;
+
+    users.push({ username, password });
+
+    // auto login after signup
+    req.session.user = username;
+
+    res.redirect('/dashboard');
+});

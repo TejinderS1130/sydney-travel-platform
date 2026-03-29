@@ -15,55 +15,102 @@ html {
 nav ul {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     list-style-type: none;
-    padding: 15px;
+    padding: 16px 20px;
     margin: 0;
-    background: linear-gradient(90deg, #7243de, #5a32b3);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    /* smoother premium gradient */
+    background: linear-gradient(135deg, #4f6d8a, #2f4f6f);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
+/* LINKS */
 nav a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
-    padding: 10px 18px;
-    border-radius: 8px;
-    transition: 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
     font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
+/* HOVER (glass effect) */
 nav a:hover {
-    background-color: rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(8px);
+    transform: translateY(-2px);
+}
+
+.active-nav {
+    font-weight: 700;
 }
 
 /* HERO */
 #city-photo {
     background: url('https://static.independent.co.uk/2024/03/20/17/newFile.jpg') center/cover no-repeat;
-    height: 450px;
+    height: 500px; /* slightly taller looks premium */
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 
+/* DARK OVERLAY */
 #city-photo::before {
     content: "";
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.45);
+    inset: 0;
+    /* gradient overlay instead of flat */
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.3)
+    );
 }
 
+/* TEXT */
 .hero-text {
     position: relative;
     color: white;
     text-align: center;
+    z-index: 1;
 }
 
+/* HEADING */
 .hero-text h1 {
-    font-size: 48px;
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    /* subtle shadow = premium */
+    text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+/* SUBTEXT */
+.hero-text p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ANIMATION */
+.hero-text {
+  animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* SECTIONS */
@@ -80,22 +127,10 @@ section {
     padding: 80px 20px;
 }
 
-#more-info {
-    background: #f5f5f0;
-}
-
 /* HEADINGS */
 h2 {
     text-align: center;
     margin-bottom: 30px;
-}
-
-/* SEARCH HEADING */
-.search-heading {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 100;
-    margin-bottom: 25px;
 }
 
 /* ABOUT */
@@ -211,27 +246,10 @@ h2 {
     align-items: center;
     gap: 15px;
     background: #ffffff;
-    padding: 12px;
+    padding: 14px;
     border-radius: 50px;
-}
-
-/* INPUT FIELD */
-.search-field {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #e9eaec;
-    padding: 12px 16px;
-    border-radius: 30px;
-    flex: 1;
-}
-
-.search-field input {
-    border: none;
-    background: transparent;
-    outline: none;
-    font-size: 15px;
-    width: 100%;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    flex-wrap: wrap;
 }
 
 /* SWAP BUTTON */
@@ -246,23 +264,6 @@ h2 {
 
 .swap-icon:hover {
     transform: rotate(180deg) scale(1.1);
-}
-
-/* BUTTON */
-.search-btn {
-    background: linear-gradient(90deg, #7243de, #5a32b3);
-    color: white;
-    border: none;
-    padding: 14px 30px;
-    border-radius: 30px;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.search-btn:hover {
-    transform: scale(1.05);
 }
 
 /* TRAVELLERS */
@@ -291,7 +292,7 @@ h2 {
 }
 
 .traveller-row button {
-    background: #2563eb;
+    background: linear-gradient(135deg, #546E8A, #3c6382);
     color: white;
     border: none;
     padding: 4px 10px;
@@ -300,30 +301,11 @@ h2 {
 }
 
 /* SEARCH */
-.search-container {
-    background: #f1f3f4;   
-    padding: 40px 30px;
-    border-radius: 30px;
-    max-width: 1100px;   
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
 .search-heading {
     text-align: center;
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 30px;
-}
-
-.search-bar {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background: #ffffff;
-    padding: 14px;
-    border-radius: 50px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    flex-wrap: wrap;
 }
 
 .search-field {
@@ -338,36 +320,49 @@ h2 {
 
 .search-field input {
     border: none;
-    outline: none;
     background: transparent;
+    outline: none;
+    font-size: 15px;
     width: 100%;
 }
 
 /* BUTTON */
 .search-btn {
-    background: linear-gradient(90deg, #7243de, #5a32b3);
+    background: linear-gradient(135deg, #546E8A, #3c6382);
     color: white;
     border: none;
     padding: 14px 26px;
     border-radius: 30px;
+    font-size: 15px;
+    font-weight: 500;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .search-btn:hover {
-    transform: scale(1.05);
-}
+    transform: scale(1.10);
+    
+} 
 
 /* MORE INFO */
 #more-info {
-    background: #ebebdc; 
+    background: #ebebdc;
     width: 100%;
-    padding: 100px 0;
+    padding: 60px 0;
+    margin: 0;
 }
-#more-info .container {
+
+#more-info .container,
+#more-info > div {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
     max-width: 1100px;
     margin: auto;
-    text-align: center;
+}
+
+#more-info h2 {
+    margin-bottom: 30px;
 }
 
 /* ICON CONTAINER */
@@ -378,14 +373,14 @@ h2 {
     margin-top: 20px;
 }
 
-/* KEEP <a> but style like cards */
+/* ICON CARD */
 .icons a {
     background: white;
     width: 80px;
     height: 80px;
     border-radius: 14px;
     text-decoration: none;
-    color: #7243de;
+    color: #546E8A;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -409,7 +404,7 @@ h2 {
 /* HOVER */
 .icons a:hover {
     transform: translateY(-6px);
-    background: linear-gradient(90deg, #7243de, #5a32b3);
+    background: #546E8A;
     color: white;
 }
 
@@ -444,26 +439,26 @@ h2 {
 
 /* FOOTER */
 footer {
-    background: linear-gradient(90deg, #7243de, #5a32b3);
-    padding: 10px 0;              /* smaller height */
+    background: linear-gradient(135deg, #4f6d8a, #2f4f6f);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.15); /* shadow on top */
+    padding: 10px 0;
     text-align: center;
     color: white;
-    font-size: 13px;              /* slightly smaller text */
-    margin-top: 0;   /* removes gap above footer */
-
+    font-size: 14px;
+    margin-top: 0 !important;
 }
 
-/* FOOTER LINKS (keep href working) */
+/* LINKS ( Privacy | Terms | Contact) */
 footer a {
-    color: white;
+    color: rgba(255,255,255,0.85);
     text-decoration: none;
-    margin: 0 10px;
-    opacity: 0.9;
+    margin: 0 8px;
     transition: 0.3s;
 }
 
 footer a:hover {
-    opacity: 1;
+    color: #ffffff;
     text-decoration: underline;
 }
 
@@ -482,39 +477,6 @@ footer a:hover {
     width: 250px;
     text-align: center;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-}
-
-/* MATCH ATTRACTIONS BACKGROUND */
-#more-info {
-    background: #ebebdc !important; 
-    width: 100% !important;
-    padding: 60px 0 !important;
-    margin: 0 !important;
-}
-
-/* REMOVE BOX EFFECT */
-#more-info .container,
-#more-info > div {
-    background: transparent !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    max-width: 1100px;
-    margin: auto;
-}
-
-/* FIX SECTION SPACING */
-#more-info h2 {
-    margin-bottom: 30px;
-}
-
-/* ICONS CENTER */
-.icons {
-    justify-content: center;
-}
-
-/* ENSURE NO GAP BEFORE FOOTER */
-footer {
-    margin-top: 0 !important;
 }
 
 /* MAKE TRANSITION SMOOTH */
@@ -584,23 +546,6 @@ footer {
     color: #555;
 }
 
-/* BUTTON */
-.real-search-btn {
-    background: linear-gradient(90deg, #7243de, #5a32b3);
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 25px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-    white-space: nowrap;
-}
-
-.real-search-btn:hover {
-    transform: scale(1.05);
-}
-
 /* LABEL */
 .mock-label {
     text-align: center;
@@ -628,22 +573,6 @@ footer {
     margin-top: 15px;
 }
 
-/* button stays same style */
-.real-search-btn {
-    background: linear-gradient(90deg, #7243de, #5a32b3);
-    color: white;
-    border: none;
-    padding: 12px 22px;
-    border-radius: 25px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.real-search-btn:hover {
-    transform: scale(1.05);
-}
-
 /* TABS STYLE */
 .search-tabs {
     display: flex;
@@ -661,11 +590,239 @@ footer {
 }
 
 .tab.active {
-    background: #2563eb;
+    background: linear-gradient(135deg, #4f6d8a, #2f4f6f);
     color: white;
 }
 
 /* RETURN DATE FIELD */
 .return-date {
     display: flex;
+}
+
+/* SIGNUP MODAL (FINAL FIX)*/
+.custom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(11, 19, 43, 0.85);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+
+.custom-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* MAIN WRAPPER */
+.contact-container {
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+}
+
+/* BOX */
+.form-wrapper {
+    width: 100%;
+    height: 450px;
+    background: #fff;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    display: flex;
+}
+
+/* CLOSE */
+.close-modal-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+/* LEFT PANEL */
+.banner {
+    width: 40%;
+    background: linear-gradient(135deg, #4b6584, #3c6382);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    z-index: 1;
+}
+
+/* RIGHT FORM */
+.signup-form {
+    width: 60%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+    z-index: 1;
+}
+
+/* IMPORTANT FIX (THIS WAS YOUR ISSUE) */
+.green-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(135deg, #6C5CE7, #8E44AD);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    transform: translateX(-100%); /* hidden */
+    transition: transform 0.5s ease;
+    z-index: 2;
+}
+
+/* WHEN ACTIVE */
+.contact-container.active .green-bg {
+    transform: translateX(0);
+}
+
+/* BUTTON STYLE */
+.green-bg button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: white;
+    color: #6C5CE7;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* INPUTS */
+.input-group {
+    margin-bottom: 12px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.book-btn,
+.real-search-btn {
+    background: linear-gradient(135deg, #546E8A, #3c6382);
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.book-btn:hover,
+.real-search-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* SIGNUP BUTTON */
+.signup-btn {
+    margin: 10px auto;   /*  to centers it */
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    background: #f1c40f;
+    width: 70%;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;      /* required for margin auto to work */
+}
+
+/* BACKGROUND */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ebebdc, #e3e6e8);
+}
+
+/* GLASS CARD */
+.login-box {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(18px);
+    padding: 70px 60px;
+    border-radius: 24px;
+    width: 420px;
+    text-align: center;
+    box-shadow: 
+        0 30px 80px rgba(0,0,0,0.15),
+        inset 0 1px 0 rgba(255,255,255,0.6);
+    transition: 0.3s ease;
+}
+
+/* subtle hover lift */
+.login-box:hover {
+    transform: translateY(-5px);
+}
+
+/* TITLE */
+.login-box h2 {
+    font-size: 38px;
+    margin-bottom: 35px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* INPUTS */
+.login-box input {
+    width: 100%;
+    padding: 16px;
+    margin: 12px 0;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    background: rgba(255,255,255,0.8);
+    transition: 0.25s;
+}
+
+/* INPUT FOCUS EFFECT */
+.login-box input:focus {
+    outline: none;
+    border: 1px solid #546E8A;
+    box-shadow: 0 0 0 3px rgba(84,110,138,0.15);
+}
+
+/* BUTTON (MATCH YOUR THEME) */
+.login-box button {
+    margin-top: 20px;
+    width: 70%;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #546E8A, #3c6382);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* HOVER */
+.login-box button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }

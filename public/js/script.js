@@ -52,6 +52,11 @@ function handleSearchSubmit() {
         return false;
     }
 
+    if (!from || !to || !date) {
+    openSignup(); // instead of alert
+    return false;
+}
+
     if (tripType === "return" && !returnDate) {
         alert("Please select return date");
         return false;
@@ -99,3 +104,34 @@ function selectTrip(type) {
         returnField.style.display = "flex";
     }
 }
+
+// OPEN SIGNUP MODAL
+function openSignup() {
+    const modal = document.getElementById("signupModal");
+    const container = document.querySelector(".contact-container");
+
+    modal.classList.add("show");
+
+    // trigger animation AFTER modal shows
+    setTimeout(() => {
+        container.classList.add("change");
+    }, 100);
+}
+
+// CLOSE SIGNUP
+document.addEventListener("DOMContentLoaded", () => {
+    const closeBtn = document.getElementById("closeModalBtn");
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+            const modal = document.getElementById("signupModal");
+            const container = document.querySelector(".contact-container");
+
+            container.classList.remove("change");
+
+            setTimeout(() => {
+                modal.classList.remove("show");
+            }, 300);
+        });
+    }
+});

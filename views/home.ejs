@@ -26,7 +26,7 @@
             <li><a href="https://www.sydney.com/events" target="_blank">Events <i class="bi bi-box-arrow-up-right"></i></a></li>
             <li><a href="https://www.sydney.com/accommodation/hotel-and-motel" target="_blank">Places To Stay <i class="bi bi-box-arrow-up-right"></i></a></li>
             <li><a href="https://www.sydney.com/deals" target="_blank">Deals & Packages <i class="bi bi-box-arrow-up-right"></i></a></li>
-
+            <li><a href="#" onclick="openSignup()">Sign Up</a></li>
             <% if (typeof user !== 'undefined' && user) { %>
                 <li><a href="/dashboard">Dashboard</a></li>
                 <li><a href="/logout">Logout</a></li>
@@ -167,6 +167,49 @@
         <a href="https://transportnsw.info" target="_blank"><i class="bi bi-train-front-fill"></i></a>
     </div>
 </section>
+
+<!-- SIGNUP MODAL -->
+<div id="signupModal" class="custom-modal">
+  <div class="contact-container" id="container">
+    <div class="form-wrapper">
+      <span class="close-modal-btn" id="closeModalBtn">&times;</span>
+
+      <div class="banner">
+        <h1>Join Platform</h1>
+        <p>Create your account to track flights and manage bookings.</p>
+      </div>
+
+      <div class="green-bg">
+        <div class="initial-text">
+          <h2>Welcome</h2>
+          <p>Create your account to continue.</p>
+        </div>
+        <button type="button" id="toggleFormBtn">Create Account</button>
+      </div>
+
+      <!-- IMPORTANT CHANGE: action added -->
+      <form class="signup-form" action="/signup" method="POST">
+        
+        <div class="signup-form-header">
+          <h1>Create Account</h1>
+        </div>
+        
+
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input name="username" type="text" placeholder="Username" required />
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input name="password" type="password" placeholder="Password" required />
+        </div>
+
+        <button type="submit" class="signup-btn">Sign Up</button>
+      </form>
+    </div>
+  </div>
+</div>
 
 </main>
 
