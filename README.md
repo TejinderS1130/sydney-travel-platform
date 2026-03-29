@@ -1,79 +1,132 @@
-<img width="1456" height="677" alt="Screenshot 2026-03-27 at 3 08 38 PM" src="https://github.com/user-attachments/assets/e0e2f84d-af32-498c-b8c7-08a737dafa90" />
+## 🛠️ Tech Stack
 
-## Tech Stack
-
-<p align="center">
-  <img src="https://img.shields.io/badge/HTML5-Structure-orange?style=for-the-badge&logo=html5">
-  <img src="https://img.shields.io/badge/CSS3-Styling-blue?style=for-the-badge&logo=css3">
-  <img src="https://img.shields.io/badge/JavaScript-Functionality-yellow?style=for-the-badge&logo=javascript">
-</p>
+![HTML](https://img.shields.io/badge/HTML-5-orange?style=for-the-badge\&logo=html5)
+![CSS](https://img.shields.io/badge/CSS-3-blue?style=for-the-badge\&logo=css3)
+![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge\&logo=javascript)
+![Node.js](https://img.shields.io/badge/Node.js-green?style=for-the-badge\&logo=node.js)
+![Express](https://img.shields.io/badge/Express-black?style=for-the-badge\&logo=express)
 
 ---
 
-# Sydney City Website
+#  Sydney Travel Platform 
 
-Modern responsive travel website showcasing **Sydney, Australia**, designed with a clean UI and interactive front-end features.
-
----
-
-## Overview
-
-This project simulates a real-world travel platform, combining:
-
-• Clean UI/UX design  
-• Structured layout and components  
-• Interactive flight search functionality  
-
-The goal was to build a **production-style front-end project** that reflects real web application design.
+A full-stack travel web application that combines **tourism exploration** with a **flight search system** and **user dashboard**.
 
 ---
 
-## About Sydney
+##  Features
 
-Sydney is the capital of New South Wales and the largest city in Australia, with a population of over 5 million people.
-
-It is globally recognized for iconic landmarks such as:
-- Sydney Opera House  
-- Harbour Bridge  
-- Bondi Beach  
-
-Sydney blends modern city life with natural beauty, offering:
-- Stunning waterfront views  
-- A multicultural population  
-- A strong tourism and economic presence  
-
-It is widely known as the **“Harbour City”**.
+*  Sydney tourism showcase (Attractions, Events, Stay, Deals)
+*  Flight search (Return & One-way)
+*  Swap locations functionality
+*  Traveller selection
+*  User authentication (Login system)
+*  Dashboard with flight history
+*  Real flight redirection (Google Flights integration)
 
 ---
 
-## Features
+##  Project Architecture
 
-• Modern and responsive UI  
-• Interactive flight search (Google Flights redirect)  
-• Card-based attraction display  
-• External navigation with icons  
-• Clean layout with consistent spacing  
+* **Frontend**: EJS + CSS + JavaScript
+* **Backend**: Node.js + Express
+* **Views**: Dynamic rendering using EJS
+* **Routing**: Express routes for login, dashboard, search
+
+---
+
+##  Screenshots
+
+###  Homepage
+
+<img src="screenshots/hero.png" width="1000"/>
+
+###  About Section
+
+<img src="screenshots/about.png" width="1000"/>
+
+###  Attractions
+
+<img src="screenshots/attractions.png" width="1000"/>
+
+###  Flight Search (Return)
+
+<img src="screenshots/search-return.png" width="1000"/>
+
+###  Flight Search (One-way)
+
+<img src="screenshots/search-oneway.png" width="1000"/>
+
+###  Form Validation
+
+<img src="screenshots/validation.png" width="1000"/>
+
+###  Login Page
+
+<img src="screenshots/login.png" width="500"/>
+
+###  Dashboard
+
+<img src="screenshots/dashboard.png" width="1000"/>
+
+###  Flight Results
+
+<img src="screenshots/results.png" width="1000"/>
 
 ---
 
-## Functionality
+##  Installation
 
-The flight search system allows users to:
+Clone the repository:
 
-1. Enter departure city  
-2. Enter destination  
-3. Select travel date  
+```bash
+git clone https://github.com/TejinderS1130/sydney-travel-platform.git
+cd sydney-travel-platform
+```
 
-The application dynamically redirects to **Google Flights** with the selected parameters.
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the app:
+
+```bash
+node server.js
+```
+
+Open in browser:
+
+```
+http://localhost:3000
+```
 
 ---
-## Screenshots
 
-<img width="1458" height="784" alt="Screenshot 2026-03-27 at 3 08 52 PM" src="https://github.com/user-attachments/assets/e5bee230-b4f7-4b72-b3f9-0611027b2e13" />
+##  Key Highlights
+
+* Real-world UI/UX design similar to modern travel platforms
+* End-to-end full-stack implementation
+* Clean component-based structure
+* Interactive user experience
 
 ---
-<img width="1462" height="774" alt="Screenshot 2026-03-27 at 3 10 13 PM" src="https://github.com/user-attachments/assets/8b949dae-5d8f-4a9c-bbce-098afeb0614c" />
 
+##  Future Improvements
 
+*  Real flight API integration (Skyscanner / Amadeus)
+*  Database (MongoDB) for user data
+*  Deployment (Render / Vercel)
+*  Mobile responsiveness enhancements
+
+---
+
+## Author
+
+**Tejinder Singh**
+Aspiring SOC Analyst | Cybersecurity Enthusiast
+
+---
 
 
