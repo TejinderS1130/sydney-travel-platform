@@ -1,4 +1,4 @@
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ![HTML](https://img.shields.io/badge/HTML-5-orange?style=for-the-badge\&logo=html5)
 ![CSS](https://img.shields.io/badge/CSS-3-blue?style=for-the-badge\&logo=css3)
@@ -8,30 +8,48 @@
 
 ---
 
-#  Sydney Travel Platform 
+#  Sydney Travel Platform
 
-A full-stack travel web application that combines **tourism exploration** with a **flight search system** and **user dashboard**.
+A modern **full-stack travel web application** combining **tourism exploration**, **flight search**, and **user authentication/dashboard** — designed with a clean, production-style UI.
+
+---
+
+##  Overview
+
+This project simulates a **real-world travel platform** where users can:
+
+* Explore Sydney tourism content
+* Search for flights (Return / One-way)
+* Manage sessions via authentication
+* View personalized dashboard data
+
+Built with a focus on:
+
+*  Clean UI/UX
+*  Fast interactions
+*  Modular structure
 
 ---
 
 ##  Features
 
-*  Sydney tourism showcase (Attractions, Events, Stay, Deals)
-*  Flight search (Return & One-way)
-*  Swap locations functionality
-*  Traveller selection
-*  User authentication (Login system)
-*  Dashboard with flight history
-*  Real flight redirection (Google Flights integration)
+✔ Sydney tourism showcase (Attractions, Events, Stay, Deals)
+✔ Flight search (Return & One-way toggle)
+✔ Swap locations functionality
+✔ Traveller selection dropdown
+✔ User authentication (Login + Signup Modal)
+✔ Dashboard with flight history
+✔ Real flight redirection (Google Flights)
+✔ Form validation & UX enhancements
 
 ---
 
-##  Project Architecture
+##  Architecture
 
-* **Frontend**: EJS + CSS + JavaScript
-* **Backend**: Node.js + Express
-* **Views**: Dynamic rendering using EJS
-* **Routing**: Express routes for login, dashboard, search
+* **Frontend:** EJS + CSS + Vanilla JavaScript
+* **Backend:** Node.js + Express
+* **Rendering:** Server-side with EJS
+* **Routing:** Express-based route handling
 
 ---
 
@@ -41,33 +59,55 @@ A full-stack travel web application that combines **tourism exploration** with a
 
 <img src="screenshots/hero.png" width="1000"/>
 
+---
+
 ###  About Section
 
 <img src="screenshots/about.png" width="1000"/>
+
+---
 
 ###  Attractions
 
 <img src="screenshots/attractions.png" width="1000"/>
 
+---
+
 ###  Flight Search (Return)
 
 <img src="screenshots/search-return.png" width="1000"/>
+
+---
 
 ###  Flight Search (One-way)
 
 <img src="screenshots/search-oneway.png" width="1000"/>
 
+---
+
 ###  Form Validation
 
 <img src="screenshots/validation.png" width="1000"/>
 
+---
+
 ###  Login Page
 
-<img src="screenshots/login.png" width="500"/>
+<img src="screenshots/login.png" width="450"/>
+
+---
+
+###  Signup Modal (New UI)
+
+<img src="screenshots/signup-modal.png" width="1000"/>
+
+---
 
 ###  Dashboard
 
 <img src="screenshots/dashboard.png" width="1000"/>
+
+---
 
 ###  Flight Results
 
@@ -90,7 +130,7 @@ Install dependencies:
 npm install
 ```
 
-Run the app:
+Run the server:
 
 ```bash
 node server.js
@@ -106,19 +146,21 @@ http://localhost:3000
 
 ##  Key Highlights
 
-* Real-world UI/UX design similar to modern travel platforms
-* End-to-end full-stack implementation
-* Clean component-based structure
-* Interactive user experience
+*  Real-world UI inspired by modern travel platforms
+*  Authentication flow with modal-based signup
+*  Clean separation of frontend and backend
+*  Smooth user interactions and dynamic rendering
+*  Portfolio-ready full-stack project
 
 ---
 
 ##  Future Improvements
 
-*  Real flight API integration (Skyscanner / Amadeus)
-*  Database (MongoDB) for user data
+*  Flight API integration (Amadeus / Skyscanner)
+*  Database integration (MongoDB)
 *  Deployment (Render / Vercel)
-*  Mobile responsiveness enhancements
+*  Full mobile responsiveness
+*  Secure authentication (JWT / sessions)
 
 ---
 
@@ -128,5 +170,3 @@ http://localhost:3000
 Aspiring SOC Analyst | Cybersecurity Enthusiast
 
 ---
-
-
