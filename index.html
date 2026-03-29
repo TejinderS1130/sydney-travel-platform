@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sydney City Website</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="https://www.sydney.com/" target="_blank">Home <i class="bi bi-box-arrow-up-right"></i></a></li>
+            <li><a href="https://www.visitnsw.com/" target="_blank">About <i class="bi bi-box-arrow-up-right"></i></a></li>
+            <li><a href="https://www.sydney.com/destinations" target="_blank">Attractions <i class="bi bi-box-arrow-up-right"></i></a></li>
+            <li><a href="https://www.sydney.com/events" target="_blank">Events <i class="bi bi-box-arrow-up-right"></i></a></li>
+            <li><a href="https://www.sydney.com/accommodation/hotel-and-motel" target="_blank">Places To Stay <i class="bi bi-box-arrow-up-right"></i></a></li>
+            <li><a href="https://www.sydney.com/deals" target="_blank">Deals & Packages <i class="bi bi-box-arrow-up-right"></i></a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section id="city-photo">
+    <div class="hero-text">
+        <h1>Sydney, Australia</h1>
+        <p>Welcome to our Vivid City of Celebrations!</p>
+    </div>
+</section>
+
+<main>
+
+<!-- ABOUT -->
+<section id="about-city">
+    <h2>About the City</h2>
+
+    <div class="about-full">
+
+        <p>
+            Sydney is the capital of New South Wales and the largest city in Australia, with a population of over 5.5 million people. 
+            It is located on the country’s southeastern coast and is famous for its natural harbour, stunning beaches, and vibrant lifestyle.
+        </p>
+
+        <p>
+            The city surrounds Sydney Harbour and stretches from the Pacific Ocean in the east to the Blue Mountains in the west. 
+            It is often called the “Harbour City” because of its breathtaking waterfront views, iconic skyline, and world-class landmarks.
+        </p>
+
+        <p>
+            Sydney has a rich cultural and historical background dating back more than 30,000 years, when Aboriginal peoples first inhabited the region. 
+            Modern Sydney was established in 1788 as a British colony, making it one of the oldest cities in Australia.
+        </p>
+
+        <p>
+            Today, Sydney is a global city known for its multicultural population, thriving economy, and high quality of life. 
+            It is home to internationally recognized attractions such as the Sydney Opera House, Harbour Bridge, Bondi Beach, and Darling Harbour.
+        </p>
+
+        <p>
+            Beyond tourism, Sydney is also a major hub for finance, technology, education, and international business. 
+            Its dynamic atmosphere, combined with a relaxed coastal lifestyle, makes it one of the most desirable cities in the world to visit and live in.
+        </p>
+
+    </div>
+
+    <!-- HIGHLIGHT CARDS -->
+    <div class="about-highlights">
+        <div class="highlight-card">
+            <h4>Population</h4>
+            <p>5.5M+</p>
+        </div>
+
+        <div class="highlight-card">
+            <h4>Founded</h4>
+            <p>1788</p>
+        </div>
+
+        <div class="highlight-card">
+            <h4>Nickname</h4>
+            <p>Harbour City</p>
+        </div>
+    </div>
+</section>
+
+    <!-- ATTRACTIONS -->
+   <section id="attractions">
+
+    <h2>Top Attractions</h2>
+
+  
+    <div id="city-pics">
+
+        <div class="pics">
+            <img src="https://cdn-imgix-open.headout.com/blog/media/images/new/Sydney+Australia.jpg" alt="">
+            <div class="overlay">Opera House</div>
+        </div>
+
+        <div class="pics">
+            <img src="https://www.sydney.com/sites/sydney/files/styles/open_graph/public/2025-07/183145%20-%20Vivid%20Sydney%20-%20Sofitel%20Sydney%20-%20Darling%20Harbour%20%20-%20DNSW_DT.jpg?itok=hiXiTN-F" alt="">
+            <div class="overlay">Darling Harbour</div>
+        </div>
+
+        <div class="pics">
+            <img src="https://images.rove.me/w_740,q_85/jenol1p4vbsuv6pkttdk/sydney-royal-botanic-garden.jpg" alt="">
+            <div class="overlay">Botanical Gardens</div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FLIGHT SEARCH -->
+<section id="book-flight">
+    <h2>Search Flights</h2>
+
+    <div class="flight-bar">
+
+        <!-- FROM -->
+        <div class="flight-field">
+            <i class="bi bi-geo-alt"></i>
+            <input id="from" type="text" placeholder="From (City)">
+        </div>
+
+        <!-- TO -->
+        <div class="flight-field">
+            <i class="bi bi-geo"></i>
+            <input id="to" type="text" placeholder="To (Destination)">
+        </div>
+
+        <!-- DATE -->
+        <div class="flight-field">
+            <i class="bi bi-calendar-event"></i>
+            <input id="date" type="date">
+        </div>
+
+        <!-- BUTTON -->
+        <button class="flight-search-btn" onclick="searchFlights()">
+            Search
+        </button>
+
+    </div>
+</section>
+
+    </div>
+</section>
+
+<!-- INFO -->
+<section id="more-info">
+    <h2>More Information</h2>
+
+    <div class="icons">
+        <a href="https://www.ca.kayak.com/Cheap-Sydney-Car-Rentals.2258.cars.ksp" target="_blank"><i class="bi bi-car-front-fill"></i></a>
+        <a href="https://www.trivago.ca/en-CA/lm?themeId=1&search=200-25057&sem_keyword=sydney%20hotels&sem_creativeid=697625080781&sem_matchtype=e&sem_network=g&sem_device=c&sem_placement=&sem_target=&sem_adposition=&sem_param1=&sem_param2=&sem_campaignid=11857607886&sem_adgroupid=114547197279&sem_targetid=kwd-10517091&sem_location=9000945&cipc=sem&cip=1071900386&gad_source=1&gclid=EAIaIQobChMIy8Sg-cSIhgMVwkpHAR2XoQIuEAAYAiAAEgKnuvD_BwE" target="_blank"><i class="bi bi-house-fill"></i></a>
+        <a href="https://transportnsw.info" target="_blank"><i class="bi bi-train-front-fill"></i></a>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>
+        © 2024 Tejinder Singh |
+        <a >Privacy</a> |
+        <a >Terms</a> |
+        <a >Contact</a>
+    </p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

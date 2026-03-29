@@ -1,0 +1,671 @@
+/* GLOBAL */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #ebebdc;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 15px;
+    margin: 0;
+    background: linear-gradient(90deg, #7243de, #5a32b3);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: rgba(255,255,255,0.25);
+}
+
+/* HERO */
+#city-photo {
+    background: url('https://static.independent.co.uk/2024/03/20/17/newFile.jpg') center/cover no-repeat;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#city-photo::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-text {
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+}
+
+/* SECTIONS */
+section {
+    padding: 70px 20px;
+}
+
+#about-city {
+    background: #f5f5f0;
+}
+
+#book-flight {
+    background: #f5f5f0;
+    padding: 80px 20px;
+}
+
+#more-info {
+    background: #f5f5f0;
+}
+
+/* HEADINGS */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* SEARCH HEADING */
+.search-heading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 100;
+    margin-bottom: 25px;
+}
+
+/* ABOUT */
+.about-full {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 40px;
+}
+
+.about-full p {
+    font-size: 17px;
+    margin-bottom: 18px;
+    color: #333;
+}
+
+/* ABOUT CARDS */
+.about-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.highlight-card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    width: 170px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-8px);
+}
+
+/* GALLERY */
+#city-pics {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.pics {
+    border-radius: 16px;
+    overflow: hidden;
+    width: 350px;
+    background: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.pics:hover {
+    transform: translateY(-8px);
+}
+
+.pics img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+/* TEXT UNDER IMAGE */
+.overlay {
+    background: white;
+    color: #222;
+    padding: 10px;
+    font-weight: 600;
+    text-align: center;
+    
+}
+
+/* SEARCH SECTION */
+.search-container {
+    background: #f1f3f4;
+    padding: 30px;
+    border-radius: 30px;
+    max-width: 1100px;
+    margin: 40px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+#book-flight {
+    background: #ffffff; 
+    padding: 80px 20px;
+}
+
+/* Tabs */
+.search-tabs {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #666;
+}
+
+.search-tabs span {
+    cursor: pointer;
+    padding-bottom: 6px;
+}
+
+.search-tabs .active {
+    color: #2563eb;
+    border-bottom: 3px solid #2563eb;
+}
+
+/* SEARCH BAR */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 50px;
+}
+
+/* INPUT FIELD */
+.search-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #e9eaec;
+    padding: 12px 16px;
+    border-radius: 30px;
+    flex: 1;
+}
+
+.search-field input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 15px;
+    width: 100%;
+}
+
+/* SWAP BUTTON */
+.swap-icon {
+    background: white;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.swap-icon:hover {
+    transform: rotate(180deg) scale(1.1);
+}
+
+/* BUTTON */
+.search-btn {
+    background: linear-gradient(90deg, #7243de, #5a32b3);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    transform: scale(1.05);
+}
+
+/* TRAVELLERS */
+.travellers-field {
+    position: relative;
+    cursor: pointer;
+}
+
+.traveller-dropdown {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    width: 220px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    display: none;
+    z-index: 999;
+}
+
+.traveller-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.traveller-row button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* SEARCH */
+.search-container {
+    background: #f1f3f4;   
+    padding: 40px 30px;
+    border-radius: 30px;
+    max-width: 1100px;   
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.search-heading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #ffffff;
+    padding: 14px;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    flex-wrap: wrap;
+}
+
+.search-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f3f4f6;
+    padding: 12px 16px;
+    border-radius: 30px;
+    flex: 1;
+}
+
+.search-field input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+}
+
+/* BUTTON */
+.search-btn {
+    background: linear-gradient(90deg, #7243de, #5a32b3);
+    color: white;
+    border: none;
+    padding: 14px 26px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    transform: scale(1.05);
+}
+
+/* MORE INFO */
+#more-info {
+    background: #ebebdc; 
+    width: 100%;
+    padding: 100px 0;
+}
+#more-info .container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+/* ICON CONTAINER */
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* KEEP <a> but style like cards */
+.icons a {
+    background: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: #7243de;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+/* ICON */
+.icons i {
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+
+/* LABEL */
+.icons span {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* HOVER */
+.icons a:hover {
+    transform: translateY(-6px);
+    background: linear-gradient(90deg, #7243de, #5a32b3);
+    color: white;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .about-highlights {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flight-box {
+        flex-direction: column;
+    }
+
+    #city-pics {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(90deg, #7243de, #5a32b3);
+    padding: 10px 0;              /* smaller height */
+    text-align: center;
+    color: white;
+    font-size: 13px;              /* slightly smaller text */
+    margin-top: 0;   /* removes gap above footer */
+
+}
+
+/* FOOTER LINKS (keep href working) */
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* DASHBOARD */
+.history-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.history-card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* MATCH ATTRACTIONS BACKGROUND */
+#more-info {
+    background: #ebebdc !important; 
+    width: 100% !important;
+    padding: 60px 0 !important;
+    margin: 0 !important;
+}
+
+/* REMOVE BOX EFFECT */
+#more-info .container,
+#more-info > div {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* FIX SECTION SPACING */
+#more-info h2 {
+    margin-bottom: 30px;
+}
+
+/* ICONS CENTER */
+.icons {
+    justify-content: center;
+}
+
+/* ENSURE NO GAP BEFORE FOOTER */
+footer {
+    margin-top: 0 !important;
+}
+
+/* MAKE TRANSITION SMOOTH */
+#book-flight {
+    padding-bottom: 60px;
+}
+
+/* FLIGHT RESULTS */
+.results-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.flight-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.flight-card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    width: 260px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.flight-card:hover {
+    transform: translateY(-5px);
+}
+
+.flight-card h3 {
+    margin-bottom: 10px;
+}
+
+.book-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #7243de, #5a32b3);
+    color: white;
+    cursor: pointer;
+}
+
+/* HEADER FIX */
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 40px auto 20px;
+    padding: 0 20px;
+}
+
+/* LEFT SIDE TEXT */
+.results-title h2 {
+    margin: 0;
+}
+
+.results-title p {
+    margin: 5px 0 0;
+    color: #555;
+}
+
+/* BUTTON */
+.real-search-btn {
+    background: linear-gradient(90deg, #7243de, #5a32b3);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.real-search-btn:hover {
+    transform: scale(1.05);
+}
+
+/* LABEL */
+.mock-label {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* RESULTS GRID ALIGNMENT */
+.flight-results {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.results-top {
+    text-align: center;
+    margin: 40px auto 20px;
+}
+
+/* center button */
+.center-btn {
+    margin-top: 15px;
+}
+
+/* button stays same style */
+.real-search-btn {
+    background: linear-gradient(90deg, #7243de, #5a32b3);
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.real-search-btn:hover {
+    transform: scale(1.05);
+}
+
+/* TABS STYLE */
+.search-tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.tab {
+    padding: 8px 18px;
+    border-radius: 30px;
+    background: #e5e7eb;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.tab.active {
+    background: #2563eb;
+    color: white;
+}
+
+/* RETURN DATE FIELD */
+.return-date {
+    display: flex;
+}

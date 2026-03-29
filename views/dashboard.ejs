@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
+</nav>
+
+<section class="dashboard-container">
+
+    <h1>Welcome <%= user %> 🚀</h1>
+    <p class="dashboard-subtitle">Your Flight Search History</p>
+
+    <!-- HISTORY -->
+    <% if (typeof history !== 'undefined' && history.length > 0) { %>
+
+        <div class="history-grid">
+            <% history.slice().reverse().forEach((item) => { %>
+                <div class="history-card">
+                    <h3>Flight ✈️</h3>
+                    <p><strong>From:</strong> <%= item.from %></p>
+                    <p><strong>To:</strong> <%= item.to %></p>
+                    <p><strong>Date:</strong> <%= item.date %></p>
+                </div>
+            <% }) %>
+        </div>
+
+    <% } else { %>
+        <p class="no-data">No searches yet.</p>
+    <% } %>
+
+    <br><br>
+    <a href="/" class="search-btn">Search Flights</a>
+
+    <!-- SEARCH RESULTS -->
+    <% if (typeof results !== 'undefined' && results && results.flights && results.flights.length > 0) { %>
+
+        <!-- HEADER WITH BUTTON -->
+  <div class="results-top">
+
+    <h2>Flights from <%= results.from %> → <%= results.to %></h2>
+    <p><strong>Date:</strong> <%= results.date %></p>
+
+    <button 
+        class="real-search-btn center-btn"
+        onclick="openRealFlight('<%= results.from %>', '<%= results.to %>', '<%= results.date %>')"
+    >
+        View Real Prices
+    </button>
+
+</div>
+
+<p class="mock-label">
+    ⚠️ Estimated results (Click “View Real Prices” for live data)
+</p>
+
+        <!-- RESULTS GRID -->
+        <div class="flight-results">
+
+            <% results.flights.forEach((flight) => { %>
+                <div class="flight-card">
+
+                    <h3><%= flight.airline %></h3>
+
+                    <p><strong>Departure:</strong> <%= flight.depart %></p>
+                    <p><strong>Arrival:</strong> <%= flight.arrive %></p>
+                    <p><strong>Duration:</strong> <%= flight.duration %></p>
+
+                    <h4><%= flight.price %></h4>
+
+                    <button 
+                        class="book-btn"
+                        onclick="openRealFlight('<%= results.from %>', '<%= results.to %>', '<%= results.date %>')"
+                    >
+                        View Price
+                    </button>
+
+                </div>
+            <% }) %>
+
+        </div>
+
+    <% } %>
+
+</section>
+
+<!-- JS (IMPORTANT) -->
+<script src="/js/script.js?v=2"></script>
+
+</body>
+</html>
